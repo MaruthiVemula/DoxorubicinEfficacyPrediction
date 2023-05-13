@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+  <title>Datathon</title>
+  <link href="{{ url_for('static', filename='css/report.css') }}" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+
+      <a href="index.html"><img src="{{url_for('static', filename='IMG/black_logo.png')}}"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="improvement.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <h1>Prognosis Report</h1>
+  <h2>Predicted Tumor Volume(mL): <b>{{form_data}}</b></h2>
+  <p>
+    Glioblastomas are one of the fastest growing tumors in existence. Due to this, tumor prognosis is critical to
+    identify which symptoms the patient may soon experience. Below is important information regarding your specific
+    tumor, including the segmented initial tumor volume and the predicted tumor growth with and without Doxorubicin
+    administration. The administration shown below is for 2 21-day cycles. Additionally, there is a 13 day period
+    before the chemotherapy simulation which represents the average time from diagnosis to treatment.
+  </p>
+  <img src="{{ img_file_path }}" alt="User Image" class="center">
+
+</body>

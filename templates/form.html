@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+  <title>Datathon</title>
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+
+      <a href="index.html"><img src="{{url_for('static', filename='IMG/white_logo.png')}}"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="improvement.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="text-box">
+      <div class="gradient-text">
+        <h1>Glioblastoma Tumor Prognosis</h1>
+      </div>
+
+      <p>Import MRI scan to see how the tumor is going to grow with and without chemotherapy
+        <br>
+
+      </p>
+      <a id="hero-btn" class="hero-btn">Generate Report</a>
+    </div>
+  </section>
+
+  <section class="main">
+    <div id="upload">
+      <h4>Upload MRI Scan Files</h4>
+
+      <h1>Flair</h1>
+      <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+      </form>
+
+      <h1>T1</h1>
+      <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+      </form>
+
+      <h1>T2</h1>
+      <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+      </form>
+
+      <a class="generate-btn" href={{ url_for('home') }}>Generate Patient Prognosis Report</a>
+
+    </div>
+
+  </section>
+
+  <section class="improvements">
+    <div class="left-col">
+      <h1>How It Works</h1>
+    </div>
+    <div class="right-col">
+      <p>Click the button below to learn more about how we generate the reports</p>
+      <div class="button-wrapper">
+        <a id="hero-btn" class="improvement-btn" href="improvement.html">Learn More!</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="footer">
+    <p>Made with <b>a passion for education</b> by Maruthi Vemula, Pranav Narala, & Arnav Garg</p>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

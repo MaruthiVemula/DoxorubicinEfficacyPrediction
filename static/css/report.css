@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #dee2e6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  background-color: #3d405b;
+  color:#fff;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+b {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.container{
+  padding-top: 500px;
+  padding-bottom: 100px;
+}
